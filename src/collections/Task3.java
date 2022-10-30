@@ -13,6 +13,7 @@ public class Task3 {
 
         getTimeMsOfInsert(list1);
         getTimeMsOfInsert(list2);
+        System.out.println(list1);
 
     }
 
@@ -28,7 +29,7 @@ public class Task3 {
 
     public static void fillTheList(List list) {
         for (int i = 0; i < 1000000; i++) {
-            list.add(0,1);
+            list.add(1);
 
         }
     }

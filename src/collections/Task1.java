@@ -26,11 +26,19 @@ public class Task1 {
         HashMap<String, Integer> numberOfRepeats = new HashMap<String, Integer>();
 
         for (String i : list) {
+            System.out.print("i = " + i + " ");
             Integer j = numberOfRepeats.get(i);
+            System.out.print("j = " + j + " ");
+
             numberOfRepeats.put(i, (j == null) ? 1 : j + 1);
+            System.out.println(numberOfRepeats);
         }
         for (Map.Entry<String, Integer> val : numberOfRepeats.entrySet()) {
-            System.out.println("Litera " + val.getKey() + " " + "occurs" + ": " + val.getValue() + " times");
+            if (val.getValue() <= 1) {
+                numberOfRepeats.remove(val);
+            } else {
+                System.out.println("Litera " + val.getKey() + " " + "occurs" + ": " + val.getValue() + " times");
+            }
         }
     }
 
